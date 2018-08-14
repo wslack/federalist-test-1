@@ -1,0 +1,130 @@
+/*font family for page. If you have another style sheet that sets font family, you can delete this rule*/
+div, td, p {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 13px;
+}
+
+/*Control DIV for expand all and collapse all links*/
+#p7TMctrl {
+	font-size: 0.6em;
+	display: none;
+	/*/*/display: block; /* Hide from NN4*/
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 8px;
+	margin-left: 0;
+}
+#p7TMctrl a:link {
+	color: #666666;
+}
+#p7TMctrl a:visited {
+	color: #7094E6;
+}
+#p7TMctrl a:hover {
+	color: #000000;
+}
+
+
+/*Sets line-height of all menuitems*/
+#p7TMnav div {
+	/*/*/line-height: 1.5; /* */
+	color: #7094E6;
+}
+
+
+/*Sets background color and border around the menu DIV*/
+#p7TMnav {
+	background-color: #FFFFFF;
+	border-bottom: 1px solid #999;
+}
+
+/*Sets a bottom margin for each top-level link*/
+#p7TMnav div {
+	margin: 0 0 .25em 0;
+}
+
+/*second level menuitem divs and lower -Cascades to lower levels-*/
+/*Sets left margin to .6em establishing a fluid cascading indent*/
+/*Sets a left border*/
+#p7TMnav div div {
+	margin: 0 0 0 .6em;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #475B8C;
+}
+
+/*The Link style for top-level menuitems and is read by all browsers*/
+#p7TMnav div a {
+	color: #000;
+	font-size: 1em;
+}
+/*The Link style for top-level menuitems hidden from Netscape 4*/
+#p7TMnav div a {
+	/*/*/display: block;
+	color: #FFFFFF;
+	border: 1px solid #999;
+	padding: 0 0 0 .4em;
+	text-decoration: none;
+	background-color: #5E7BBF;
+}
+#p7TMnav div a:visited {
+	color: #fff;
+}
+#p7TMnav div a:hover {
+	color: #FFFFFF;
+	background-color: #7094E6;
+}
+
+/*The Link and visited styles combined for second-level menuitems*/
+#p7TMnav div div a, #p7TMnav div div a:visited {
+	color: #666666;
+	font-size: 0.9em;
+	background-color: transparent;
+	border: 0;
+}
+#p7TMnav div div a:hover {
+	color: #073C75;
+	background-color: #FFFFFF;
+}
+
+/*The Link style for third-level menuitems and lower*/
+/*To set a specific style for the fourth level, add a div to the selector*/
+/*Fourth-level example syntax: p7TMnav div div div div a {declaration}*/
+#p7TMnav div div div a {
+	font-size: .7em;
+}
+
+/*rules programatically assigned to parent links when image-based plus and minus option is selected. The padding on the 4 following rules supercedes (via !important) the padding on the p7TMnav div a selector when you've chosen the option to use images for the plus and minus signs*/
+.p7plusmark {
+	background-repeat: no-repeat;
+	background-image: url(p7t_plus.gif);
+	background-position: 6px 50%;
+	padding: 0 0 0 20px !important;
+}
+.p7minusmark {
+	background-repeat: no-repeat;
+	background-image: url(p7t_minus.gif);
+	background-position: 6px 50%;
+	padding: 0 0 0 20px !important;
+}
+
+/*rule programatically assigned to child links when image-based plus and minus option is selected*/
+.p7defmark {
+	background-image:  none;
+	/*padding: 0 0 0 20px !important;*/
+	padding: 0 0 0 20px !important;
+}
+
+/*rules programatically assigned to page link correesponding to current page (You are Here)*/
+.p7currentmark {
+	font-weight: normal;
+	text-transform: uppercase;
+	background-color: transparent !important;
+	color: #1A5C99!important;
+	padding: 0 0 0 20px !important;
+	font-size: 8px;
+}
+/*special style for User Guide Tutorials*/
+#stretchyCell {
+	width: 14em;
+}
